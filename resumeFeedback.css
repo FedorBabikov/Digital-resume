@@ -1,0 +1,164 @@
+/* -------------------------------------------------------------------------- */
+/*                              General settings                              */
+/* -------------------------------------------------------------------------- */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  padding: 20px 10vw;
+  background-color: #9eb2b5;
+  counter-reset: edu-list; /* The counter is used later in Education section - to give consecutive numbers. */
+  font-family: "Times New Roman", Times, serif;
+}
+
+#container {
+  background-color: snow;
+  border: 1px solid lightslategray;
+  border-radius: 20px;
+  min-width: 470px;
+  overflow: hidden;
+}
+
+section > p,
+#education > ul > li {
+  line-height: 1.5;
+}
+
+section p {
+  margin-bottom: 10px;
+  text-align: justify;
+}
+
+section p:last-of-type {
+  margin-bottom: 0;
+}
+
+h3 {
+  margin: 20px 50px;
+  color: #0c575e;
+}
+
+main section {
+  margin: 20px 100px;
+  padding: 20px;
+  border-top: 1px solid lightslategray;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                               Header section                               */
+/* -------------------------------------------------------------------------- */
+
+#header-1 {
+  background-color: #0c575e;
+  color: snow;
+  padding: 20px 50px;
+  margin-bottom: 40px;
+  letter-spacing: 1px;
+}
+
+h1 {
+  margin-bottom: 7px; /* Implementing feedback: Margin after H1 is just 7px - that way it feels related to the content below */
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                 Using FLEX for ordering                    */
+/* -------------------------------------------------------------------------- */
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-item-1 {
+  order: 1; /* This is where the the order rearrangement happens. */
+}
+
+.flex-item-2 {
+  order: 2;
+}
+
+.flex-item-3 {
+  order: 3;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                              Personal section                              */
+/* -------------------------------------------------------------------------- */
+
+#personal {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 10px; /* Implementing feedback: Margin after the photo is just 10px - on smartphone it will look nicer*/
+}
+
+img {
+  height: 150px;
+  border-radius: 10px;
+  margin: 0 50px;
+}
+
+#personal-info-wrapper {
+  display: inline-block;
+}
+
+.personal-info {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.personal-info li {
+  line-height: 2;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                              Education section                             */
+/* -------------------------------------------------------------------------- */
+
+#education ul li {
+  list-style: none;
+}
+
+#education ul li::before {
+  /* The use of the counter. */
+  counter-increment: edu-list;
+  content: counter(edu-list) ". ";
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                 Responsive                                 */
+/* -------------------------------------------------------------------------- */
+
+@media screen and (max-width: 900px) {
+  #personal {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  h3,
+  #header-1 {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  h3 {
+    margin: 10px 0 10px 0;
+  }
+  #personal-info-wrapper {
+    margin-top: 10px;
+  }
+  main section {
+    margin: 10px 50px;
+    padding: 10px;
+    border-top: 1px solid lightslategray;
+  }
+}

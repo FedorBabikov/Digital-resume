@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My digital resume</title>
+    <link rel="stylesheet" href="resumeFeedback.css" />
+    <!-- Here I link the separate stylesheet to the page. -->
+  </head>
+
+  <body>
+    <div id="container">
+      <!-- For centering all the resume nicely on the web-page. -->
+      <!-- There are two headers on the page: one for name and job position, another - for personal info. -->
+      <header id="header-1">
+        <h1>Iosif Kobzon</h1>
+        <p>Junior web-developer</p>
+      </header>
+
+      <header id="header-2">
+        <h3>Personal info</h3>
+        <section id="personal">
+          <img src="photo.jpg" alt="my photo" />
+          <div id="personal-info-wrapper">
+            <ul class="personal-info">
+              <!-- Everything - from top to bottom - is fake :-) Except for the photo.. -->
+              <li><strong>Position: </strong>Junior web-developer</li>
+              <li><strong>Age: </strong>35</li>
+              <li><strong>Lives in: </strong>Utrecht</li>
+              <li><strong>Contact: </strong>+31 555 55 555 555</li>
+            </ul>
+          </div>
+        </section>
+      </header>
+
+      <main class="flex-container">
+        <!-- I use flex container to rearrange its children in a separate order in CSS. -->
+
+        <div class="flex-item-2">
+          <!-- This one is the first in HTML, but second - on the actual page. -->
+          <h3>Education</h3>
+          <section id="education">
+            <p>My educational background:</p>
+            <ul>
+              <li>
+                2004-2009: Cambridge University; diploma in Medieval History of
+                Art
+              </li>
+              <li>
+                2010 - 2015: Harvard University; diploma in Corporate Finance
+              </li>
+              <li>2016 - 2020: Utrecht University; MBA degree</li>
+              <li>Nov 2021 - till now: HackYourFuture; a student</li>
+            </ul>
+          </section>
+        </div>
+
+        <div class="flex-item-1">
+          <!-- This one is the second in HTML, but first - on the actual page. -->
+          <h3>Who I am</h3>
+          <section id="me">
+            <p>
+              I am a famous song singer. I also like fishing for sharks and
+              whales on Sundays - and hunting for polar bears in Antarktida on
+              Tuesdays.
+            </p>
+            <p>
+              I also enjoy spending time with my sixteen dogs and my family. We
+              all get along really well.
+            </p>
+            <p>
+              In my spare time I prefer coding in JavaScript, Ruby, Python, C++,
+              just C, C#, HTML and CSS. It's more of a hobby, really. I enjoy it
+              so much. CSS is my favorite.
+            </p>
+          </section>
+        </div>
+
+        <div class="flex-item-3">
+          <h3>My work experience</h3>
+          <section id="work">
+            <p>
+              <strong>Sep 4, 1998 - Oct 2008:</strong> together with a few other
+              guys I founded Google. I then worked there as CEO until October
+              2008.
+            </p>
+            <p>
+              <strong>Oct 16, 2008 - Nov 2021:</strong> I became a co-founder of
+              GitHub. I was part of the team until November 2021.
+            </p>
+            <p>
+              <strong>Nov 14, 2021 - until now:</strong> I am a student at
+              HackYourFuture. I consider that to be my full-time job for the
+              next 7 months.
+            </p>
+          </section>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
